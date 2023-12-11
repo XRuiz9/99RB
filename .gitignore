@@ -72,3 +72,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 **/.DS_Store
+
+/[Aa]ssets/[Vv]ideos/UnityVideoBkg.mp4
+/[Aa]ssets/[Vv]ideos/UnityVideoBkg.mp4.meta

@@ -10,6 +10,9 @@ public class SkySwap : MonoBehaviour
     public GameObject balloon;
 
     public GameObject sign;
+    public GameObject batteredSign;
+    public GameObject signSpot;
+
     private Renderer rend;
 
     private void Start()
@@ -25,6 +28,7 @@ public class SkySwap : MonoBehaviour
 
         dawnLight.SetActive(false);
         dayLight.SetActive(true);
+        signSpot.SetActive(true);
 
         balloon.SetActive(false);
     }
@@ -32,9 +36,9 @@ public class SkySwap : MonoBehaviour
     public void LightsOut()
     {
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
-
         dayLight.SetActive(false);
 
-        rend.material.mainTextureOffset = new Vector2(0.0f, 0.5f);
+        sign.SetActive(false);
+        batteredSign.SetActive(true);
 ;    }
 }

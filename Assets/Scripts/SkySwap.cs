@@ -9,9 +9,6 @@ public class SkySwap : MonoBehaviour
     public GameObject dayLight;
     public GameObject balloon;
 
-    public GameObject daySpot;
-    public GameObject darkSpot;
-
     public GameObject sign;
     private Renderer rend;
 
@@ -37,8 +34,6 @@ public class SkySwap : MonoBehaviour
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
 
         dayLight.SetActive(false);
-        daySpot.SetActive(false);
-        darkSpot.SetActive(true);
 
         rend.material.mainTextureOffset = new Vector2(0.0f, 0.5f);
 ;    }

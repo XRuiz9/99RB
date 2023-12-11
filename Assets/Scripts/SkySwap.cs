@@ -9,6 +9,17 @@ public class SkySwap : MonoBehaviour
     public GameObject dayLight;
     public GameObject balloon;
 
+    public GameObject daySpot;
+    public GameObject darkSpot;
+
+    public GameObject sign;
+    private Renderer rend;
+
+    private void Start()
+    {
+        rend = sign.GetComponent<Renderer>();
+    }
+
     public void SwapSkies()
     {
         RenderSettings.skybox = daySkybox;
@@ -20,4 +31,15 @@ public class SkySwap : MonoBehaviour
 
         balloon.SetActive(false);
     }
+
+    public void LightsOut()
+    {
+        RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
+
+        dayLight.SetActive(false);
+        daySpot.SetActive(false);
+        darkSpot.SetActive(true);
+
+        rend.material.mainTextureOffset = new Vector2(0.0f, 0.5f);
+;    }
 }

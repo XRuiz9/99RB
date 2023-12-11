@@ -17,7 +17,7 @@ public class BalloonSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            Instantiate(balloonPrefab, new Vector3(-40.0f, Random.Range(-4.0f, 10.0f), Random.Range(0f, 10.0f)), Quaternion.identity);
+            Instantiate(balloonPrefab, new Vector3(-40.0f, Random.Range(-4.0f, 10.0f), Random.Range(-15.0f, 5.0f)), Quaternion.identity);
         }
     }
 }
